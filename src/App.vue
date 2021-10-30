@@ -1,26 +1,56 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+            <datepicker />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Datepicker from './components/Datepicker.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Datepicker
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+input, h6,span {
+	font-family: 'IRANSansXFaNum' !important;
+	text-align: center;
 }
+
+
+    @font-face {
+	font-family: 'IRANSansX';
+	font-style: normal;
+	font-weight: 700;
+	src:local('IRANSansX'),
+   url('./fonts/IRANSansX-Bold.woff') format('woff'),   
+	local('IRANSansX'),url('./fonts/IRANSansX-Bold.woff2') format('woff2');	 
+}
+
+@font-face {
+	font-family: 'IRANSansXFaNum';
+	font-style: normal;
+	font-weight: 700;
+	src: local('IRANSansXFaNum'), url('./fonts/IRANSansXFaNum-Bold.woff2') format('woff2');	
+}
+
+@font-face {
+	font-family: 'IRANSansX';
+	font-style: normal;
+	font-weight: 400;
+	src: local('IRANSansX'), url('./fonts/IRANSansX-Regular.woff') format('woff'),   
+	local('IRANSansX'), url('./fonts/IRANSansX-Regular.woff2') format('woff2');	
+}
+
+@font-face {
+	font-family: 'IRANSansXFaNum';
+	font-style: normal;
+	font-weight: 400;
+	src: local('IRANSansXFaNum'), url('./fonts/IRANSansXFaNum-Regular.woff') format('woff');	
+}
+
+ 
 </style>

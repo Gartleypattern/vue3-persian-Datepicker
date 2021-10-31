@@ -122,6 +122,7 @@ export default {
                 return moment().locale('fa').format('YYYY');
             },
             setDate (event) {
+                let month;
                 let slash1 = '/';
                 let slash2 = '/';
                 if (event.target.textContent <10) {
@@ -130,7 +131,12 @@ export default {
                 if (this.cMonth<10) {
                     slash1 = '/0'
                 }
-                this.inputDate = this.cYear + slash1 +  (this.cMonth +1) + slash2 + event.target.textContent;
+                if(this.cMonth ===11 || this.cMonth===12){
+                        month = this.cMonth;
+                }else{
+                    month = this.cMonth +1;
+                }
+                this.inputDate = this.cYear + slash1 +  month + slash2 + event.target.textContent;
             },
             populateDate () {
                 switch(this.cMonth) {
